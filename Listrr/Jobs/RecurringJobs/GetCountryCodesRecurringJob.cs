@@ -1,5 +1,5 @@
 ﻿using Listrr.Data;
-
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -23,9 +23,16 @@ namespace Listrr.Jobs.RecurringJobs
             var countries = new List<RegionInfo>();
             foreach (var culture in CultureInfo.GetCultures(CultureTypes.SpecificCultures))
             {
-                var country = new RegionInfo(culture.LCID);
-                if (countries.All(p => p.Name != country.Name))
-                    countries.Add(country);
+                try
+                {
+                    var country = new RegionInfo(culture.LCID);
+                    if (countries.All(p => p.Name != country.Name))
+                        countries.Add(country);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
             }
 
             foreach (var regionInfo in countries)
