@@ -5,8 +5,6 @@ Listrr creates lists for shows and movies based on your filters. The created lis
 
 Specifically its a fork from before Ultimate decided to be greedy and require you to pay him to gain features. Not even new features, he just locked current ones randomly behind a paywall. Well, this fork still works if you self host! At some point I'll probably figure out how the new one works, but he decided to fully remove appsettings.json and edit/change up its format. So, that will require a bit of work to decipher...
 
-Pre) You'll need to either edit a ton or just go make a brand new domain (dot.tk?) and have this be the base site on the root /
-
 1) Clone this git to your box, if using linux, edit the docker file to include at the top
 ```
 FROM mcr.microsoft.com/dotnet/core/aspnet:2.1.11-alpine3.9
