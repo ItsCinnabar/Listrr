@@ -3,7 +3,7 @@ Listrr creates lists for shows and movies based on your filters. The created lis
 
 # This fork?
 
-Specifically its an untouched fork from before Ultimate decided to be greedy and require you to pay him to gain features. Not even new features, just locked current ones randomly behind a paywall. Well, this fork still works if you self host! At some point I'll probably figure out how the new one works, but he decided to fully remove appsettings.json and edit/change up its format. So, that will require a bit of work to decipher... What a surprise, hes not happy with $60 a month from git donations that he makes right here and now and still wants to ensure you can't self host and get more money!
+Specifically its a fork from before Ultimate decided to be greedy and require you to pay him to gain features. Not even new features, he just locked current ones randomly behind a paywall. Well, this fork still works if you self host! At some point I'll probably figure out how the new one works, but he decided to fully remove appsettings.json and edit/change up its format. So, that will require a bit of work to decipher...
 
 Pre) You'll need to either edit a ton or just go make a brand new domain (dot.tk?) and have this be the base site on the root /
 
@@ -35,7 +35,9 @@ docker run --network="bridge" -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Pa
 
 9) Fix whatever issues you have if its not working, dont put in an issue here I won't help. This gave you the base gameplan thats it.
 
-10) You are up. Was that so fucking hard? Its almost like 10 quick bullet points can get anyone up and running, but without those it takes you hours to scour through code and figure out how the entire damn thing works just to be abble to do this. Fuck, I had to capture the network traffic of listrr.pros site just to figure out the trakt redirects, since /signin-trakt doesn't appear anyone in the code.
+10) You are up. Was that so fucking hard? Its almost like 10 quick bullet points can get anyone up and running, but without those it takes you hours to scour through code and figure out how the entire damn thing works just to be abble to do this. Fuck, I had to capture the network traffic of listrr.pros site just to figure out the trakt redirects, since /signin-trakt doesn't appear anyone in the code that I saw.
+
+Come back in a day so the crons run at least once, and it should all be working. Or mannually edit startup.cs if you want to force a faster cron one time.
 
 # What can I use this for ?
 
