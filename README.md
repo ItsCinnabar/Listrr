@@ -5,6 +5,10 @@ Listrr creates lists for shows and movies based on your filters. The created lis
 
 Specifically its an untouched fork from before Ultimate decided to be greedy and require you to pay him to gain features. Not even new features, just locked current ones randomly behind a paywall. Well, this fork still works if you self host!
 
+You'll need to edit appsettings.json
+You'll need to use a redirct uri of domain/signin-trakt
+You'll need to either edit a ton or just go make a brand new domain (dot.tk?) and have this be the base site on the root /
+
 # What can I use this for ?
 
 ## Traktarr
