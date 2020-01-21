@@ -7,7 +7,16 @@ Specifically its an untouched fork from before Ultimate decided to be greedy and
 
 Pre) You'll need to either edit a ton or just go make a brand new domain (dot.tk?) and have this be the base site on the root /
 
-1) Clone this git to your box
+1) Clone this git to your box, if using linux, edit the docker file to include at the top
+```
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.1.11-alpine3.9
+
+# Install cultures (same approach as Alpine SDK image)
+RUN apk add --no-cache icu-libs
+
+# Disable the invariant mode (set in base image)
+ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false
+```
 
 2) Make a trakt app, redirect uri of https://domain.com/signin-trakt on one line and urn:ietf:wg:oauth:2.0:oob on another
 
